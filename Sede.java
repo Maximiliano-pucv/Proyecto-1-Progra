@@ -3,21 +3,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-
 public class Sede {
-    ArrayList<Ciudadano> persona;
-    HashMap<String, Ciudadano> alsoPersona;
+    private ArrayList<Ciudadano> persona;
+    private HashMap<String, Ciudadano> alsoPersona;
     private String nombreSede;
     private String region;
     private int nVotantes;
 
     public Sede(String nombreSede, String region){
-        persona = new ArrayList<Ciudadano>();
-        alsoPersona = new HashMap<String,Ciudadano>();
+        persona = new ArrayList<>();
+        alsoPersona = new HashMap<>();
         this.nombreSede = nombreSede;
         this.region = region;
         nVotantes = 0;
     }
+
     public String retornarnombre(){
         return nombreSede;
     }
