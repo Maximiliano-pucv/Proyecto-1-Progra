@@ -9,6 +9,13 @@ public class Ciudadano {
         this.Rut = Rut;
     }
 
+    //constructor usado para la función de eliminar persona
+    public Ciudadano(String name, String Rut){
+        this.edad = -1;
+        this.nombre = name;
+        this.Rut = Rut;
+    }
+
     public Ciudadano(){
         this.edad = -1;
         this.nombre = "NO NAME";
