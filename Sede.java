@@ -18,6 +18,9 @@ public class Sede {
         this.region = region;
         nVotantes = 0;
     }
+    public String retornarnombre(){
+        return nombreSede;
+    }
 
     public boolean buscar (String Rut){
         if(alsoPersona.containsKey(Rut)) return true;

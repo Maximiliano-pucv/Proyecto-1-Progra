@@ -9,8 +9,12 @@ public class main{
     public static void main (String[] args) throws IOException{
         HashMap <String,Sede> mapaSedes = new HashMap<String,Sede>();
         Menu menu = new Menu();
-        while(menu.elegirOpcion()!=0){
-            
+        while(true){
+            if(menu.elegirOpcion()==1){
+                Test pruebaTest = new Test();
+                Sede seleCiudadano = pruebaTest.rellenarSede();
+                mapaSedes.put(seleCiudadano.retornarnombre(),seleCiudadano);
+            }
         }
         
        

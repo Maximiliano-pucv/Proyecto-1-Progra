@@ -8,8 +8,21 @@ public class Ciudadano {
         this.nombre = nombre;
         this.Rut = Rut;
     }
+
+    public Ciudadano(){
+        this.edad = -1;
+        this.nombre = "NO NAME";
+        this.Rut = "00.000.000-0";
+    }
+
+    public void establecerdatos(int edad, String nombre, String Rut){
+        this.edad = edad;
+        this.nombre = nombre;
+        this.Rut = Rut;
+    }
+
     public String retornarRut(){
-        return nombre;
+        return Rut;
     }
     public void mostrarDatos(){
         System.out.println("--------------------");

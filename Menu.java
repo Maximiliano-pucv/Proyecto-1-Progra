@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Menu {
     private int seleccion;
@@ -10,11 +9,34 @@ public class Menu {
         lectura = new BufferedReader( new InputStreamReader(System.in));
     }
 
-    public void mostrarOpciones(){
-        System.out.println("Elija Que desea hacer");
+    private void mostrarOpciones(){
+        System.out.println("-TEST DE TEXTO");
+        System.out.println("-TEST DE TEXTO");
+        System.out.println("-TEST DE TEXTO");
+        System.out.println("-TEST DE TEXTO");
     }
-    /*public int elegir(){
-        seleccion = Integer.parseInt(lectura.readLine());
+
+    public int elegirOpcion() throws IOException{
+        System.out.println("Elija Que desea hacer");
+        mostrarOpciones();
+        String opcion = lectura.readLine();
+        seleccion = Integer.parseInt(opcion);
+        switch(seleccion){
+            case 1:
+            System.out.println("uno");
+            break;
+            
+            case 2:
+            System.out.println("dos");
+            break;
+
+            default:
+            System.out.println("nose");
+            return 0;
+            
+        }
         return seleccion;
-    }*/
+
+    }
+    
 }
