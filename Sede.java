@@ -36,6 +36,14 @@ public class Sede {
         }else return false;
     }
     
+    public boolean eliminar(Ciudadano persona){
+        if(alsoPersona.containsValue(persona) == true){
+            alsoPersona.remove(persona.retornarRut());
+            this.persona.remove(this.persona.indexOf(persona));
+            return true;
+        }
+        return false;
+    }
 
 
     /*public Ciudadano eliminar(Ciudadano individuo){
