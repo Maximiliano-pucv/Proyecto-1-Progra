@@ -23,11 +23,11 @@ public class Menu {
         seleccion = Integer.parseInt(opcion);
         switch(seleccion){
             case 1:
-            System.out.println("uno");
+            System.out.println("Nueva Sede");
             break;
             
             case 2:
-            System.out.println("dos");
+            System.out.println("Mostrar sedes y ciudadanos");
             break;
 
             default:

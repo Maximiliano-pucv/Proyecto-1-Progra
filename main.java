@@ -1,5 +1,5 @@
 import java.io.*;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -8,13 +8,22 @@ import java.util.HashMap;
 public class main{
     public static void main (String[] args) throws IOException{
         HashMap <String,Sede> mapaSedes = new HashMap<String,Sede>();
+        ArrayList <Sede> listaSedes = new ArrayList<Sede>();
         Menu menu = new Menu();
         while(true){
-            if(menu.elegirOpcion()==1){
+            int seleccion = menu.elegirOpcion();
+            if(seleccion==1){
                 Test pruebaTest = new Test();
-                Sede seleCiudadano = pruebaTest.rellenarSede();
-                mapaSedes.put(seleCiudadano.retornarnombre(),seleCiudadano);
+                Sede sederelleno = pruebaTest.rellenarSede();
+                mapaSedes.put(sederelleno.retornarnombre(),sederelleno);
+                listaSedes.add(sederelleno);
+            }else if(seleccion==2){
+                for(int i=0; i<listaSedes.size();i++){
+                    Sede aux = listaSedes.get(i);
+                    aux.mostrar();
+                }
             }
+            if(seleccion== 0) break;
         }
         
        
