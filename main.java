@@ -1,14 +1,17 @@
 import java.io.*;
 //import java.util.ArrayList;
-//import java.util.HashMap;
+import java.util.HashMap;
 
 
 
 
 public class main{
     public static void main (String[] args) throws IOException{
-        //HashMap <String,Sede> mapaSedes = new HashMap<String,Sede>();
-
+        HashMap <String,Sede> mapaSedes = new HashMap<String,Sede>();
+        Menu menu = new Menu();
+        while(menu.elegirOpcion()!=0){
+            
+        }
         
        
         /*Ciudadano testPersona = new Ciudadano(19,"Maria", "12365485-k");
