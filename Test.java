@@ -5,7 +5,7 @@ public class Test {
     public Ciudadano rellenarCiudadano() throws IOException{
 
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
-
+        System.out.println("Ingrese los datos de el ciudadano");
         Ciudadano prueba = new Ciudadano();
         String nombre = lector.readLine();
         String Rut = lector.readLine();

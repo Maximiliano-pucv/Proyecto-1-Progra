@@ -10,9 +10,9 @@ public class Menu {
     }
 
     private void mostrarOpciones(){
-        System.out.println("-TEST DE TEXTO");
-        System.out.println("-TEST DE TEXTO");
-        System.out.println("-TEST DE TEXTO");
+        System.out.println("-Aniadir Sede");
+        System.out.println("-Mostrar todas las sedes y Votantes");
+        System.out.println("-Aniadir Votante");
         System.out.println("-TEST DE TEXTO");
     }
 
@@ -28,6 +28,10 @@ public class Menu {
             
             case 2:
             System.out.println("Mostrar sedes y ciudadanos");
+            break;
+
+            case 3:
+            System.out.println("Aniadir ciudadano");
             break;
 
             default:

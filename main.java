@@ -9,11 +9,13 @@ public class main{
     public static void main (String[] args) throws IOException{
         HashMap <String,Sede> mapaSedes = new HashMap<String,Sede>();
         ArrayList <Sede> listaSedes = new ArrayList<Sede>();
+        BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
         Menu menu = new Menu();
         while(true){
             int seleccion = menu.elegirOpcion();
+            Test pruebaTest = new Test();
             if(seleccion==1){
-                Test pruebaTest = new Test();
+                
                 Sede sederelleno = pruebaTest.rellenarSede();
                 mapaSedes.put(sederelleno.retornarnombre(),sederelleno);
                 listaSedes.add(sederelleno);
@@ -22,6 +24,15 @@ public class main{
                     Sede aux = listaSedes.get(i);
                     aux.mostrar();
                 }
+            }else if(seleccion == 3){
+                System.out.println("seleccione la sede");
+                String nombreBus = lector.readLine();
+                if(mapaSedes.containsKey(nombreBus)==true){
+                    Sede sedeVotacion = mapaSedes.get(nombreBus);
+                    Ciudadano votante = pruebaTest.rellenarCiudadano();
+                    sedeVotacion.agregar(votante);
+                }else System.out.println("la sede No esta inscrita");
+
             }
             if(seleccion== 0) break;
         }
