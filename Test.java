@@ -1,3 +1,5 @@
+//Esta clase no es lo principal, como dice el nombre de la clase, es para hacer pruebas
+
 import java.io.*;
 public class Test {
     public Ciudadano rellenarCiudadano() throws IOException{
