@@ -35,11 +35,11 @@ public class Sede {
     
 
 
-    public Ciudadano eliminar(Ciudadano individuo){
+    /*public Ciudadano eliminar(Ciudadano individuo){
         if(buscar(individuo.retornarRut())){
             return individuo;
         }else return null;
-    }
+    }*/
 
     public void mostrar(){
         System.out.println("-Especificaciones de la sede-");
