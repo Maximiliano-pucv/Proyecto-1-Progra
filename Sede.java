@@ -11,8 +11,8 @@ public class Sede {
     private int nVotantes;
 
     public Sede(String nombreSede, String region){
-        persona = new ArrayList<>();
-        alsoPersona = new HashMap<>();
+        this.persona = new ArrayList<>();
+        this.alsoPersona = new HashMap<>();
         this.nombreSede = nombreSede;
         this.region = region;
         nVotantes = 0;
@@ -39,7 +39,7 @@ public class Sede {
     public boolean eliminar(Ciudadano persona){
         if(alsoPersona.containsValue(persona) == true){
             alsoPersona.remove(persona.retornarRut());
-            this.persona.remove(this.persona.indexOf(persona));
+            this.persona.remove(persona);
             return true;
         }
         return false;
