@@ -31,6 +31,27 @@ public class Ciudadano {
     public String retornarRut(){
         return Rut;
     }
+
+    public String retornarNombre(){
+        return nombre;
+    }
+
+    public int retornarEdad(){
+        return edad;
+    }
+
+    public void setRut(String Rut){
+        this.Rut = Rut;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+
     public void mostrarDatos(){
         System.out.println("--------------------");
         System.out.println("Rut: " +Rut);

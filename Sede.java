@@ -21,6 +21,26 @@ public class Sede {
         return nombreSede;
     }
 
+    public String retornarRegion(){
+        return region;
+    }
+
+    public int retornarVotantes(){
+        return nVotantes; 
+    }
+
+    public void setNombre(String nombreSede){
+        this.nombreSede = nombreSede;
+    }
+
+    public void setRegion(String region){
+        this.region = region;
+    }
+
+    public void setVotantes(int nVotantes){
+        this.nVotantes = nVotantes;
+    }
+
     public boolean buscar (String Rut){
         if(alsoPersona.containsKey(Rut)) return true;
         else return false;
@@ -37,7 +57,7 @@ public class Sede {
     
     public boolean eliminar(Ciudadano persona){
         if(alsoPersona.containsKey(persona.retornarRut()) == true){
-            persona = alsoPersona.get(persona.retornarRut());
+persona = alsoPersona.get(persona.retornarRut());
             alsoPersona.remove(persona.retornarRut());
             this.persona.remove(this.persona.indexOf(persona));
             nVotantes--;
