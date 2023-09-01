@@ -10,14 +10,14 @@ public class Menu {
     }
 
     private void mostrarOpciones(){
-        System.out.println("-Aniadir Sede");
-        System.out.println("-Mostrar todas las sedes y Votantes");
+        System.out.println("-Añadir Sede");
+        System.out.println("-Mostrar todas las Sedes y Votantes");
         System.out.println("-Añadir Votante");
         System.out.println("-TEST DE TEXTO");
     }
 
     public int elegirOpcion() throws IOException{
-        System.out.println("Elija Que desea hacer");
+        System.out.println("Elija que desea hacer");
         mostrarOpciones();
         String opcion = lectura.readLine();
         seleccion = Integer.parseInt(opcion);
@@ -31,7 +31,7 @@ public class Menu {
             break;
 
             case 3:
-            System.out.println("Aniadir ciudadano");
+            System.out.println("Añadir ciudadano");
             break;
 
             default:
