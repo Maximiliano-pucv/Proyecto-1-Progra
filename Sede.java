@@ -57,7 +57,7 @@ public class Sede {
     
     public boolean eliminar(Ciudadano persona){
         if(alsoPersona.containsKey(persona.retornarRut()) == true){
-persona = alsoPersona.get(persona.retornarRut());
+            persona = alsoPersona.get(persona.retornarRut());
             alsoPersona.remove(persona.retornarRut());
             this.persona.remove(this.persona.indexOf(persona));
             nVotantes--;
