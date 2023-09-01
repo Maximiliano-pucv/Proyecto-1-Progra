@@ -1,6 +1,5 @@
 //import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 
 public class Sede {
@@ -37,9 +36,11 @@ public class Sede {
     }
     
     public boolean eliminar(Ciudadano persona){
-        if(alsoPersona.containsValue(persona) == true){
+        if(alsoPersona.containsKey(persona.retornarRut()) == true){
+            persona = alsoPersona.get(persona.retornarRut());
             alsoPersona.remove(persona.retornarRut());
-            this.persona.remove(persona);
+            this.persona.remove(this.persona.indexOf(persona));
+            nVotantes--;
             return true;
         }
         return false;
