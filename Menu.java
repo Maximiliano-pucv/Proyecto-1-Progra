@@ -10,13 +10,15 @@ public class Menu {
     }
 
     private void mostrarOpciones(){
-        System.out.println("-Añadir Sede");
-        System.out.println("-Mostrar todas las Sedes y Votantes");
-        System.out.println("-Añadir Votante");
+        System.out.println("1- Añadir Sede");
+        System.out.println("2- Mostrar todas las Sedes y Votantes");
+        System.out.println("3- Añadir Votante");
+        System.out.println("4- Mostrar sedes");
         System.out.println("-TEST DE TEXTO");
     }
 
     public int elegirOpcion() throws IOException{
+        System.out.println();
         System.out.println("Elija que desea hacer");
         mostrarOpciones();
         String opcion = lectura.readLine();
@@ -32,6 +34,10 @@ public class Menu {
 
             case 3:
             System.out.println("Añadir ciudadano");
+            break;
+
+            case 4:
+            System.out.println("Mostrar Sedes");
             break;
 
             default:

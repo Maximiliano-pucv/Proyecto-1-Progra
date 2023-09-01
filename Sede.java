@@ -66,13 +66,6 @@ persona = alsoPersona.get(persona.retornarRut());
         return false;
     }
 
-
-    /*public Ciudadano eliminar(Ciudadano individuo){
-        if(buscar(individuo.retornarRut())){
-            return individuo;
-        }else return null;
-    }*/
-
     public void mostrar(){
         System.out.println("-Especificaciones de la sede-");
         System.out.println("-Nombre: " +nombreSede);
@@ -82,5 +75,12 @@ persona = alsoPersona.get(persona.retornarRut());
             Ciudadano aux = persona.get(i);
             aux.mostrarDatos();
         }
+    }
+
+    public void mostrar(String nombre, String region, int totalVotantes){
+        System.out.println("-Especificaciones de la sede-");
+        System.out.println("-Nombre: " +nombreSede);
+        System.out.println("-Region: " +region);
+        System.out.println("-Actual cantidad de votantes: " +totalVotantes);
     }
 }

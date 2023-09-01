@@ -28,6 +28,12 @@ public class Ciudadano {
         this.Rut = Rut;
     }
 
+    public void establecerdatos(){
+        this.edad = -1;
+        this.nombre = "NO NAME";
+        this.Rut = "00.000.000-0";
+    }
+
     public String retornarRut(){
         return Rut;
     }

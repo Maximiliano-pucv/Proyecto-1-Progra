@@ -8,11 +8,13 @@ public class main{
         ArrayList <Sede> listaSedes = new ArrayList<Sede>();
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
         Menu menu = new Menu();
+        
         Ciudadano testPersona = new Ciudadano(19,"Maria", "12365485-k");
         Sede testSede = new Sede("Colegio", "region de los lagos");
         testSede.agregar(testPersona);
         mapaSedes.put(testSede.retornarnombre(),testSede);
         listaSedes.add(testSede);
+        
         while(true){
             int seleccion = menu.elegirOpcion();
             Test pruebaTest = new Test();
@@ -36,12 +38,14 @@ public class main{
                 }else System.out.println("la sede No esta inscrita");
 
             }
+            else if(seleccion == 4){
+                for(int i = 0; i< listaSedes.size(); i++){
+                    Sede sedes = listaSedes.get(i);
+                    sedes.mostrar(sedes.retornarnombre(), sedes.retornarRegion(), sedes.retornarVotantes());
+                }
+            }
             if(seleccion== 0) break;
         }
-        /*Ciudadano testPersona = new Ciudadano(19,"Maria", "12365485-k");
-        Sede testSede = new Sede("Colegio", "region de los lagos");
-        testSede.agregar(testPersona);
-        testSede.mostrar();*/
 
     }
 }
