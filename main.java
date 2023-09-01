@@ -44,6 +44,27 @@ public class main{
                     sedes.mostrar(sedes.retornarnombre(), sedes.retornarRegion(), sedes.retornarVotantes());
                 }
             }
+            else if(seleccion == 5){
+                System.out.println("Ingrese el nombre de la sede");
+                String nombreS = lector.readLine();
+                if(mapaSedes.containsKey(nombreS)==true){
+                    Sede sedeVotacion = mapaSedes.get(nombreS);
+                    System.out.println("Ingrese el rut del ciudadano");
+                    String rutC = lector.readLine();
+                    boolean ciudadanoElim = sedeVotacion.buscar(rutC);
+                    if(ciudadanoElim == true){
+                        sedeVotacion.eliminar(testPersona);
+                        System.out.println("El ciudadano fue eliminado");
+                    }
+                    else{
+                        System.out.println("El ciudadano no fue encontrado");
+                    }
+
+                    
+                }else System.out.println("La sede no fue encontrada");
+
+
+            }
             if(seleccion== 0) break;
         }
 

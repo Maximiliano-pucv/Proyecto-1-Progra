@@ -14,6 +14,7 @@ public class Menu {
         System.out.println("2- Mostrar todas las Sedes y Votantes");
         System.out.println("3- Añadir Votante");
         System.out.println("4- Mostrar sedes");
+        System.out.println("5- Eliminar votante de una Sede");
         System.out.println("-TEST DE TEXTO");
     }
 
@@ -40,6 +41,10 @@ public class Menu {
             System.out.println("Mostrar Sedes");
             break;
 
+            case 5:
+            System.out.println("Eliminar votante de sede");
+            break;
+            
             default:
             System.out.println("nose");
             return 0;
