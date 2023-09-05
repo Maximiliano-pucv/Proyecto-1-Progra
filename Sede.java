@@ -55,11 +55,11 @@ public class Sede {
         }else return false;
     }
     
-    public boolean eliminar(Ciudadano persona){
-        if(alsoPersona.containsKey(persona.retornarRut()) == true){
-            persona = alsoPersona.get(persona.retornarRut());
-            alsoPersona.remove(persona.retornarRut());
-            this.persona.remove(this.persona.indexOf(persona));
+    public boolean eliminar(String rutsString){
+        if(alsoPersona.containsKey(rutsString) == true){
+            Ciudadano eliminacion = alsoPersona.get(rutsString);
+            alsoPersona.remove(rutsString);
+            this.persona.remove(this.persona.indexOf(eliminacion));
             nVotantes--;
             return true;
         }

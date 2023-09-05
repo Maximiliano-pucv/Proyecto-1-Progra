@@ -51,9 +51,9 @@ public class main{
                     Sede sedeVotacion = mapaSedes.get(nombreS);
                     System.out.println("Ingrese el rut del ciudadano");
                     String rutC = lector.readLine();
-                    boolean ciudadanoElim = sedeVotacion.buscar(rutC);
-                    if(ciudadanoElim == true){
-                        sedeVotacion.eliminar(testPersona);
+                    //boolean ciudadanoElim = sedeVotacion.buscar(rutC);
+                    if(sedeVotacion.eliminar(rutC)){
+                        
                         System.out.println("El ciudadano fue eliminado");
                     }
                     else{
