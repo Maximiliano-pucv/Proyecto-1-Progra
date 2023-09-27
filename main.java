@@ -19,22 +19,23 @@ public class main{
                 Sede sederelleno = pruebaTest.rellenarSede();
                 Sedes.aniadirSede(sederelleno);
             }else if(seleccion==2){
-                Sedes.mostrarCedesCiudadanos();
+                Sedes.mostrarSedesCiudadanos();
             }else if(seleccion == 3){
-                System.out.println("seleccione la sede");
+                System.out.println("Ingrese el nombre de la sede en la que agregara");
                 String nombreBus = lector.readLine();
                 Sedes.aniadirCiudadano(nombreBus);
             }
             else if(seleccion == 4){
-                Sedes.mostrarCedes();
+                Sedes.mostrarSedes();
             }
             else if(seleccion == 5){
-                System.out.println("Ingrese el nombre de la sede y el rut de la persona");
+                System.out.println("Ingrese el nombre de la sede");
                 String nombreS = lector.readLine();
+                System.out.println("Ingrese el rut del ciudadano");
                 String rutBus = lector.readLine();
                 Sedes.eliminarCiudadano(nombreS, rutBus);
             }
-            if(seleccion== 0) break;
+            if(seleccion == 0) break;
         }
 
     }
