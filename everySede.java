@@ -36,6 +36,7 @@ public class everySede {
         Ciudadano ciudadanoAgregar = placeTest.rellenarCiudadano();
         Sede sedeDondeAgregar = mapaSedes.get(nombreSede);
         sedeDondeAgregar.agregar(ciudadanoAgregar);
+        
     }
 
     public void mostrarCedes(){
