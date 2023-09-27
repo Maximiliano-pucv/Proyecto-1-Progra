@@ -3,7 +3,7 @@ import java.io.*;
 
 
 public class main{
-    public static void main (String[] args) throws IOException{
+    public static void main (String[] args) throws IOException,RutNotOnLengthException,AgeOutOfRangeException{
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
         Menu menu = new Menu();
         everySede Sedes = new everySede();

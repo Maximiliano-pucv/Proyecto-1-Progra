@@ -46,7 +46,7 @@ public class Sede {
         else return false;
     }
 
-    public boolean agregar(Ciudadano individuo){
+    public boolean agregar(Ciudadano individuo) throws RutNotOnLengthException{
         if(buscar(individuo.retornarRut())==false){
             persona.add(individuo);
             alsoPersona.put(individuo.retornarRut(),individuo);

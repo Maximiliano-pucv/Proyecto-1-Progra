@@ -34,7 +34,8 @@ public class Ciudadano {
         this.Rut = "00.000.000-0";
     }
 
-    public String retornarRut(){
+    public String retornarRut()throws RutNotOnLengthException{
+        if(Rut.length()!=10) throw new RutNotOnLengthException();
         return Rut;
     }
 
@@ -42,11 +43,13 @@ public class Ciudadano {
         return nombre;
     }
 
-    public int retornarEdad(){
+    public int retornarEdad()throws AgeOutOfRangeException{
+        if((edad<18)||(edad>100)) throw new AgeOutOfRangeException();
         return edad;
     }
 
-    public void setRut(String Rut){
+    public void setRut(String Rut) throws RutNotOnLengthException{
+        if(Rut.length()!=10) throw new RutNotOnLengthException();
         this.Rut = Rut;
     }
 
@@ -54,7 +57,8 @@ public class Ciudadano {
         this.nombre = nombre;
     }
 
-    public void setEdad(int edad){
+    public void setEdad(int edad)throws AgeOutOfRangeException{
+        if((edad<18)||(edad>100)) throw new AgeOutOfRangeException();
         this.edad = edad;
     }
 

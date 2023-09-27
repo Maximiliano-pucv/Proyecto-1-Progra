@@ -27,7 +27,7 @@ public class everySede {
         }
     }
 
-    public void aniadirCiudadano(String nombreSede) throws IOException{
+    public void aniadirCiudadano(String nombreSede) throws IOException, AgeOutOfRangeException,RutNotOnLengthException{
         Test placeTest = new Test(); 
         if(mapaSedes.containsKey(nombreSede)==false){
             System.out.println("la sede No esta inscrita");
