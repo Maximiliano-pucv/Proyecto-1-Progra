@@ -12,7 +12,7 @@ public class everySede {
 
     public void aniadirSede(Sede lugarVotacion){
         if(mapaSedes.containsKey(lugarVotacion.retornarnombre())==true){
-            System.out.println("la sede Ya esta inscrita");
+            System.out.println("la sede ya esta inscrita");
             return;
         }
         
@@ -20,7 +20,7 @@ public class everySede {
         listaSedes.add(lugarVotacion);
     }
 
-    public void mostrarCedesCiudadanos(){
+    public void mostrarSedesCiudadanos(){
         for(int i=0; i<listaSedes.size(); i++){
             Sede aux = listaSedes.get(i);
             aux.mostrar();
@@ -30,16 +30,25 @@ public class everySede {
     public void aniadirCiudadano(String nombreSede) throws IOException, AgeOutOfRangeException,RutNotOnLengthException{
         Test placeTest = new Test(); 
         if(mapaSedes.containsKey(nombreSede)==false){
-            System.out.println("la sede No esta inscrita");
+            System.out.println("la sede no esta inscrita");
             return;
         }
-        Ciudadano ciudadanoAgregar = placeTest.rellenarCiudadano();
-        Sede sedeDondeAgregar = mapaSedes.get(nombreSede);
-        sedeDondeAgregar.agregar(ciudadanoAgregar);
+        else{
+           try{ 
+                Ciudadano ciudadanoAgregar = placeTest.rellenarCiudadano();
+                Sede sedeDondeAgregar = mapaSedes.get(nombreSede);
+                sedeDondeAgregar.agregar(ciudadanoAgregar);
+            }catch(AgeOutOfRangeException e){
+                System.out.println("error: "+ e.getMessage());
+            }catch(RutNotOnLengthException r){
+                System.out.println("error: "+ r.getMessage());
+            }
+
+        }
         
     }
 
-    public void mostrarCedes(){
+    public void mostrarSedes(){
         for(int i = 0; i< listaSedes.size(); i++){
             Sede sedes = listaSedes.get(i);
             sedes.mostrar(sedes.retornarnombre(), sedes.retornarRegion(), sedes.retornarVotantes());

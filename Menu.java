@@ -15,12 +15,12 @@ public class Menu {
         System.out.println("3- Añadir Votante");
         System.out.println("4- Mostrar sedes");
         System.out.println("5- Eliminar votante de una Sede");
-        System.out.println("-TEST DE TEXTO");
+        System.out.println("-TEST DE TEXTO (terminar)");
     }
 
     public int elegirOpcion() throws IOException{
         System.out.println();
-        System.out.println("Elija que desea hacer");
+        System.out.println("Seleccione la opcion que desea realizar");
         mostrarOpciones();
         String opcion = lectura.readLine();
         seleccion = Integer.parseInt(opcion);
@@ -46,7 +46,7 @@ public class Menu {
             break;
             
             default:
-            System.out.println("nose");
+            System.out.println("Salir");
             return 0;
             
         }
