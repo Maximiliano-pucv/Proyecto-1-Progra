@@ -17,6 +17,14 @@ public class Sede {
         nVotantes = 0;
     }
 
+    public Sede(){
+        this.persona = new ArrayList<>();
+        this.alsoPersona = new HashMap<>();
+        this.nombreSede = "NONE";
+        this.region = "NONE";
+        nVotantes = 0;
+    }
+
     public String retornarnombre(){
         return nombreSede;
     }
