@@ -6,11 +6,10 @@ public class Importaciones {
     BufferedReader lectorText = new BufferedReader(new InputStreamReader(System.in));
     private String textoLeer;
 
-    public void leerTexto()throws IOException{
-        textoLeer = lectorText.readLine();
-    }
 
     public everySede verificarTexto()throws IOException, NumberFormatException, AgeOutOfRangeException, RutNotOnLengthException{
+        System.out.println("Ingrese el archivo que quiere importar");
+        textoLeer = lectorText.readLine();
         String aux [] = textoLeer.split(".");
         if(aux[1].equals("csv")){
             return leerCsv(textoLeer);

@@ -44,6 +44,11 @@ public class main{
                 Exportaciones nose = new Exportaciones();
                 nose.Exportar(Sedes);
             }
+            else if(seleccion == 8){
+                System.out.println("Importar");
+                Importaciones importar = new Importaciones();
+                Sedes = importar.verificarTexto();
+            }
             if(seleccion == 0) break;
         }
 
