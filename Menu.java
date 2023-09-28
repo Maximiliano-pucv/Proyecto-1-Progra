@@ -44,6 +44,12 @@ public class Menu {
             case 5:
             System.out.println("Eliminar votante de sede");
             break;
+
+            case 6:
+            System.out.println("Mostrar sedes de una region especifica");
+            break;
+
+            
             
             default:
             System.out.println("Salir");

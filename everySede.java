@@ -71,5 +71,20 @@ public class everySede {
         }
     }
 
+    public void mostrarSedesRegionEspecifica(String nombreRegion){
+
+        boolean hubo = false;
+        for(int i=0; i<listaSedes.size();i++){
+            Sede sedes = listaSedes.get(i);
+            if(nombreRegion.equals(sedes.retornarRegion())){
+                sedes.mostrar(sedes.retornarnombre(), sedes.retornarRegion(), sedes.retornarVotantes());
+                hubo = true;
+            }
+        }
+        if(hubo == false) System.out.println("No habia ninguna Sede que estuviera en esa region");
+    }
+
+
+
 
 }
