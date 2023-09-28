@@ -35,6 +35,11 @@ public class main{
                 String rutBus = lector.readLine();
                 Sedes.eliminarCiudadano(nombreS, rutBus);
             }
+            else if(seleccion == 6){
+                System.out.println("Ingrese el nombre de la region");
+                String nombreReg = lector.readLine();
+                Sedes.mostrarSedesRegionEspecifica(nombreReg);
+            }
             if(seleccion == 0) break;
         }
 
