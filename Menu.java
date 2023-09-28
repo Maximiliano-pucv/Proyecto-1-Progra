@@ -15,7 +15,7 @@ public class Menu {
         System.out.println("3- Añadir Votante");
         System.out.println("4- Mostrar sedes");
         System.out.println("5- Eliminar votante de una Sede");
-        System.out.println("-TEST DE TEXTO (terminar)");
+        System.out.println("6- Mostrar Sedes de una region");
     }
 
     public int elegirOpcion() throws IOException{
