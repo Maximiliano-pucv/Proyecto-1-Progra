@@ -92,5 +92,7 @@ public class Sede {
         System.out.println("-Actual cantidad de votantes: " +totalVotantes);
     }
 
-    
+    public Ciudadano getCiudadano(int pos){
+        return persona.get(pos);
+    }    
 }
