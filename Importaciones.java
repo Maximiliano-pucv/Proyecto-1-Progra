@@ -6,25 +6,26 @@ public class Importaciones {
     BufferedReader lectorText = new BufferedReader(new InputStreamReader(System.in));
     private String textoLeer;
 
-    public void leerTexto(){
+    public void leerTexto()throws IOException{
         textoLeer = lectorText.readLine();
     }
 
-    public everySede verificarTexto(){
+    public everySede verificarTexto()throws IOException, NumberFormatException, AgeOutOfRangeException, RutNotOnLengthException{
         String aux [] = textoLeer.split(".");
         if(aux[1].equals("csv")){
             return leerCsv(textoLeer);
         }
+        else return null;
     }
 
     //orden : NombreSede,Region,nVotantes,Edad1,Nombre1,Rut1,Edad2,Nombre2,Rut2,EdadN,NombreN,RutN
 
-    public everySede leerCsv(String texto) throws IOException{
+    public everySede leerCsv(String texto) throws IOException, NumberFormatException, AgeOutOfRangeException, RutNotOnLengthException{
         everySede resultado = new everySede();
         BufferedReader lector = new BufferedReader(new FileReader(texto));
         String linea = lector.readLine();
         
-        while(linea != EOF){
+        while(linea != null){
             String datos[] = linea.split(",");
             int cont = 0;
             for(int i = 0; i< datos.length;i++){
@@ -60,6 +61,7 @@ public class Importaciones {
             resultado.aniadirSede(sedeExt);
             linea = lector.readLine();
         }
+        lector.close();
         return resultado;
     }
 }
