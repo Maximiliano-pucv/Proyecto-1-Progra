@@ -91,4 +91,6 @@ public class Sede {
         System.out.println("-Region: " +region);
         System.out.println("-Actual cantidad de votantes: " +totalVotantes);
     }
+
+    
 }

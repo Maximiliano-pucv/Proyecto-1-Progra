@@ -39,6 +39,10 @@ public class main{
                 System.out.println("Ingrese el nombre de la region");
                 String nombreReg = lector.readLine();
                 Sedes.mostrarSedesRegionEspecifica(nombreReg);
+            }else if(seleccion == 7){
+                System.out.println("exportar");
+                Exportaciones nose = new Exportaciones();
+                nose.Exportar(Sedes);
             }
             if(seleccion == 0) break;
         }

@@ -10,6 +10,10 @@ public class everySede {
         listaSedes = new ArrayList<Sede>();
     }
 
+    public int getSize(){
+        return listaSedes.size();
+    }
+
     public void aniadirSede(Sede lugarVotacion){
         if(mapaSedes.containsKey(lugarVotacion.retornarnombre())==true){
             System.out.println("la sede ya esta inscrita");
@@ -82,6 +86,10 @@ public class everySede {
             }
         }
         if(hubo == false) System.out.println("No habia ninguna Sede que estuviera en esa region");
+    }
+
+    public Sede getSede(int pos){
+        return listaSedes.get(pos);
     }
 
 

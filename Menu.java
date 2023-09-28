@@ -49,7 +49,9 @@ public class Menu {
             System.out.println("Mostrar sedes de una region especifica");
             break;
 
-            
+            case 7:
+            System.out.println("Mostrar sedes de una region especifica");
+            break;
             
             default:
             System.out.println("Salir");
