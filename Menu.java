@@ -16,6 +16,9 @@ public class Menu {
         System.out.println("4- Mostrar sedes");
         System.out.println("5- Eliminar votante de una Sede");
         System.out.println("6- Mostrar Sedes de una region");
+        System.out.println("7- Exportar Sedes y Ciudadanos");
+        System.out.println("8- Importar archivo CSV");
+        System.out.println("0- Cerrar");
     }
 
     public int elegirOpcion() throws IOException{
@@ -50,7 +53,11 @@ public class Menu {
             break;
 
             case 7:
-            System.out.println("Mostrar sedes de una region especifica");
+            System.out.println("Exportar datos");
+            break;
+             
+            case 8:
+            System.out.println("Importar datos");
             break;
             
             default:

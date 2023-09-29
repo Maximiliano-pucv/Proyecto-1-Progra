@@ -8,9 +8,9 @@ public class Importaciones {
 
 
     public everySede verificarTexto()throws IOException, NumberFormatException, AgeOutOfRangeException, RutNotOnLengthException{
-        System.out.println("Ingrese el archivo que quiere importar");
+        System.out.println("Ingrese el nombre del archivo que quiere importar");
         textoLeer = lectorText.readLine();
-        String aux [] = textoLeer.split(".");
+        String aux [] = textoLeer.split("\\.");
         if(aux[1].equals("csv")){
             return leerCsv(textoLeer);
         }
