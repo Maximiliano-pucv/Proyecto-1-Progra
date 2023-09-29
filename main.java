@@ -7,7 +7,7 @@ public class main{
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
         Menu menu = new Menu();
         everySede Sedes = new everySede();
-        Ciudadano testPersona = new Ciudadano(19,"Maria", "12365485-k");
+        Ciudadano testPersona = new Ciudadano(19,"Sofia", "12365485-k");
         Sede testSede = new Sede("Colegio", "region de los lagos");
         testSede.agregar(testPersona);
         Sedes.aniadirSede(testSede);

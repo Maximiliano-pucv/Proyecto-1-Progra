@@ -19,7 +19,7 @@ public class Importaciones {
 
     //orden : NombreSede,Region,nVotantes,Edad1,Nombre1,Rut1,Edad2,Nombre2,Rut2,EdadN,NombreN,RutN
 
-    public everySede leerCsv(String texto) throws IOException, NumberFormatException, AgeOutOfRangeException, RutNotOnLengthException{
+    public everySede leerCsv(String texto) throws IOException,NumberFormatException ,AgeOutOfRangeException, RutNotOnLengthException{
         everySede resultado = new everySede();
         BufferedReader lector = new BufferedReader(new FileReader(texto));
         String linea = lector.readLine();
@@ -35,11 +35,13 @@ public class Importaciones {
                     sedeExt.setRegion(datos[i]);
                 }
                 else if(i == 2){
-                    sedeExt.setVotantes(Integer.parseInt(datos[i]));
+                    int numV = Integer.parseInt(datos[i]);
+                    sedeExt.setVotantes(numV);
                 }
                 else if(i >= 3){
                     if (cont == 0){
-                        personasExt.setEdad(Integer.parseInt(datos[i]));
+                        int edad = Integer.parseInt(datos[i]);
+                        personasExt.setEdad(edad);
                         cont++;
                     }
                     else if (cont == 1){
