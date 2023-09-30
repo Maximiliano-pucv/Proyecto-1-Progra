@@ -46,8 +46,10 @@ public class main{
             }
             else if(seleccion == 8){
                 System.out.println("Importar");
-                Importaciones importar = new Importaciones();
-                Sedes = importar.verificarTexto();
+                //Importaciones importar = new Importaciones();
+                //Sedes = importar.verificarTexto();
+                ImportFile archivo = new ImportFile();
+                Sedes = archivo.importarArchivo();
             }
             if(seleccion == 0) break;
         }

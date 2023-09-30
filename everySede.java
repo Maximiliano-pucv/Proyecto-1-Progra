@@ -14,14 +14,15 @@ public class everySede {
         return listaSedes.size();
     }
 
-    public void aniadirSede(Sede lugarVotacion){
+    public boolean aniadirSede(Sede lugarVotacion){
         if(mapaSedes.containsKey(lugarVotacion.retornarnombre())==true){
             System.out.println("la sede ya esta inscrita");
-            return;
+            return false;
         }
         
         mapaSedes.put(lugarVotacion.retornarnombre(),lugarVotacion);
         listaSedes.add(lugarVotacion);
+        return true;
     }
 
     public void mostrarSedesCiudadanos(){
@@ -29,6 +30,18 @@ public class everySede {
             Sede aux = listaSedes.get(i);
             aux.mostrar();
         }
+    }
+    public void aniadirCiudadano(String nombreSede, Ciudadano persona) throws IOException, AgeOutOfRangeException,RutNotOnLengthException{
+        if(mapaSedes.containsKey(nombreSede)==false){
+            System.out.println("la sede no esta inscrita");
+            return;
+        }
+        else{
+            Sede sedeDondeAgregar = mapaSedes.get(nombreSede);
+            sedeDondeAgregar.agregar(persona);
+
+        }
+        
     }
 
     public void aniadirCiudadano(String nombreSede) throws IOException, AgeOutOfRangeException,RutNotOnLengthException{
